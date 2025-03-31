@@ -33,5 +33,11 @@ module.exports = {
         },
       },
     },
-  }
+  },
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  darkMode: ['selector'],
+  daisyui: {
+    themes: ['emerald', 'dracula','business'],
+    darkTheme: 'dracula',
+  },
 }
