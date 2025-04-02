@@ -2,6 +2,8 @@
 
 {{ define "css" }}
 
+{{ partial "extend_head.html" . }}
+
 {{ if site.Params.customSyntaxHighlighting }}
 <link rel="stylesheet" data-custom-syntax-highlighting />
 <style>
@@ -40,7 +42,7 @@
   </div>
 
   <div class="lg:col-span-2">
-    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert max-w-[85ch]" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
       {{ template "_internal/schema.html" . }}
 
       <header>

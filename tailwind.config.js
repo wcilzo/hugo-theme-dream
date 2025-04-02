@@ -3,6 +3,10 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      screens: {
+        '2xl': '132rem',  // 1280px
+        '3xl': '132rem',  // 1536px
+      },
     },
     extend: {
       typography: {
@@ -23,6 +27,10 @@ module.exports = {
             code: null,
             'code::before': null,
             'code::after': null,
+            img: {
+              margin: '0 auto',
+              display: 'block',
+            },
           },
         },
         quoteless: {
