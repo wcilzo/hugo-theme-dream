@@ -1,17 +1,22 @@
 {{/* 获取头像路径 */}}
 {{ $avatar := .Params.avatar }}
+{{ $defaultAvatar := .Params.avatar }}
+
 
 {{/* 将../../xxx转换为./xxx */}}
 {{ if and $avatar (not (hasPrefix $avatar "http")) }}
   {{ $avatar = replaceRE "^(\\.\\./)+" "./" $avatar }}
 {{ end }}
 
+
 <div class="flex items-center">
   {{ if $avatar }}
   <div class="avatar mr-1">
     <div class="w-8 rounded-full">
-      <img class="my-0!" src="{{ $avatar }}" alt="{{ .Params.author }}" />
-    </div>
+      <img class="my-0!" 
+      src="{{ $avatar | default .Params.avatar }}" 
+      alt="{{ .Params.author }}"
+      onerror="this.src='{{ $defaultAvatar }}'"/>    </div>
   </div>
   {{ else }}
   <span>@</span>
