@@ -4,7 +4,7 @@
 
 @plugin '@tailwindcss/typography';
 @plugin "daisyui" {
-  themes: emerald --default, forest --prefersdark;
+  themes: emerald --default, forest --prefersdark, business;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
