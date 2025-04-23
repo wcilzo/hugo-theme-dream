@@ -129,12 +129,13 @@
     </article>
   </div>
 
-  <div class="hidden lg:flex lg:flex-col lg:items-end">
+  <div class="hidden lg:flex lg:flex-col lg:items-start">
     {{ if site.Params.showTableOfContents }}
+    <nav class="text-lg" id="TableOfContents">
       {{ .TableOfContents }}
+    </nav>
     {{ end }}
   </div>
-</div>
 {{ end }}
 
 {{ define "js" }}
