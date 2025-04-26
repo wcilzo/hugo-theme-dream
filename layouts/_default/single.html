@@ -131,8 +131,9 @@
 
   <div class="hidden lg:flex lg:flex-col lg:items-start">
     {{ if site.Params.showTableOfContents }}
-    <nav class="text-lg" id="TableOfContents">
+    <nav class="text-lg" id="TableOfContents" style="margin-top: 200px">
       {{ .TableOfContents }}
+<!--      {{ partial "category.html" . }}-->
     </nav>
     {{ end }}
   </div>
